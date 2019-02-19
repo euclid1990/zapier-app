@@ -1,12 +1,16 @@
+const authentication = require('./authentication');
+
 // We can roll up all our behaviors in an App.
 const App = {
   // This is just shorthand to reference the installed dependencies you have. Zapier will
   // need to know these before we can upload
   version: require('./package.json').version,
   platformVersion: require('zapier-platform-core').version,
+  authentication: authentication.method,
 
   // beforeRequest & afterResponse are optional hooks into the provided HTTP client
   beforeRequest: [
+    authentication.addApiKeyToHeader
   ],
 
   afterResponse: [
