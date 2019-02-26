@@ -6,6 +6,7 @@ const method = {
   test: {
     url: 'https://api.chatwork.com/v2/me'
   },
+  connectionLabel: "Chatwork Auth Token",
   fields: [
     {
       key: 'api_key',
@@ -15,7 +16,7 @@ const method = {
       helpText: `Follow these steps to find your ChatWork API Key:
       Log into your ChatWork account
       Click on your name in the upper-right corner, and select Personal Settings
-      Click on the API section
+      Click on the API section or go to [API Token](https://www.chatwork.com/service/packages/chatwork/subpackages/api/token.php)
       Use your ChatWork password to generate/show your API Key
       Copy/paste that API Key into the field below.`
     }

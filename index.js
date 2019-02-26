@@ -1,4 +1,6 @@
 const authentication = require('./authentication');
+const message = require('./creates/message');
+const recipe = require('./triggers/recipe');
 
 // We can roll up all our behaviors in an App.
 const App = {
@@ -22,6 +24,7 @@ const App = {
 
   // If you want your trigger to show up, you better include it here!
   triggers: {
+    [recipe.key]: recipe
   },
 
   // If you want your searches to show up, you better include it here!
@@ -30,6 +33,7 @@ const App = {
 
   // If you want your creates to show up, you better include it here!
   creates: {
+    [message.key]: message,
   }
 };
 
